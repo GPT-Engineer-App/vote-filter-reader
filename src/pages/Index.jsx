@@ -34,7 +34,7 @@ const Index = () => {
   return (
     <Container centerContent maxW="container.md" py={4}>
       <Box width="100%" display="flex" justifyContent="space-between" alignItems="center" mb={4}>
-        <Text fontSize="2xl">Hacker News Top Stories</Text>
+        <Text fontSize="2xl" color="brand.700">Hacker News Top Stories</Text>
         <Switch isChecked={colorMode === "dark"} onChange={toggleColorMode} />
       </Box>
       <Input
@@ -45,11 +45,11 @@ const Index = () => {
       />
       <VStack spacing={4} width="100%">
         {filteredStories.map(story => (
-          <Box key={story.id} p={4} borderWidth="1px" borderRadius="md" width="100%">
+          <Box key={story.id} p={4} borderWidth="1px" borderRadius="md" width="100%" borderColor="brand.200">
             <Text fontSize="lg" fontWeight="bold">
               {story.title}
             </Text>
-            <Link href={story.url} color="teal.500" isExternal>
+            <Link href={story.url} color="brand.500" isExternal>
               Read more
             </Link>
             <Text mt={2}>Upvotes: {story.score}</Text>
